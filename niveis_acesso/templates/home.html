@@ -1,0 +1,12 @@
+{% load permission_tags %}
+
+
+
+ {%if user|has_role:'gerente'%} <!-- o role usa essa estrutra para ver o grupo do usuário  -->
+    pagina do gerenciado
+{% endif %}
+
+
+{%if user|can:'ver_metas'%} <!-- o can é feito para verificar permissoes do user no sistema inteiro -->
+    A meta é 10.000
+{% endif %}

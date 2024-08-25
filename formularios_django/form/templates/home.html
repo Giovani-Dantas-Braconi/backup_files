@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+</head>
+<body>
+
+    <form action="{% url 'processa_form_db'%}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}  <!-- tem como colocar ele em formato de lista, só fzr form.as_ul -->
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
